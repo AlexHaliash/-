@@ -1,41 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Image Metadata Extractor</title>
-    <!-- Подключаем внешний CSS файл -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Processing App</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Image Metadata Extractor</h1>
-            <p>Upload your images and explore their details in a unique way!</p>
-        </div>
-        
-        <div class="upload-area">
-            <input type="file" id="fileInput" multiple>
-            <button class="upload-btn">Upload Images</button>
-        </div>
-
-        <div class="table-container">
-            <table id="resultTable">
-                <thead>
-                    <tr>
-                        <th>File Name</th>
-                        <th>Dimensions (px)</th>
-                        <th>Resolution (dpi)</th>
-                        <th>Color Depth</th>
-                        <th>Compression</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
+  <div class="container">
+    <h1>Image Processing App</h1>
+    <input type="file" id="upload" accept="image/*">
+    <canvas id="canvas"></canvas>
+    <div class="buttons">
+      <button id="contrast">Linear Contrast</button>
+      <button id="histogram">Equalize Histogram</button>
+      <button id="download">Download Result</button>
     </div>
-
-    <!-- Подключаем внешний JS файл -->
-    <script src="app.js"></script>
+  </div>
+  <script src="app.js"></script>
 </body>
 </html>
